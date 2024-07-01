@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Codo a Codo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clínica Codo a Codo</h1>
+        <button id="verMedicos">Ver Médicos</button>
+        <button id="verPacientes">Ver Pacientes</button>
+        <button id="agregarMedico">Agregar Médico</button>
+        <button id="agregarPaciente">Agregar Paciente</button>
+
+        <div id="listaMedicos" class="lista">
+            <h2>Lista de Médicos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Especialidad</th>
+                        <th>Provincia</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Ciudad</th>
+                        <th>DNI</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="medicosTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="listaPacientes" class="lista">
+            <h2>Lista de Pacientes</h2>
+            <label for="provincia_id">Selecciona una Provincia:</label>
+            <select id="provincia_id">
+                <option value="">--Selecciona una Provincia--</option>
+            </select>
+            <button id="buscarPacientes">Buscar Pacientes</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Ciudad</th>
+                        <th>DNI</th>
+                        <th>Provincia</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="pacientesTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="formularioMedico" class="formulario">
+            <h2>Agregar/Editar Médico</h2>
+            <form id="medicoForm">
+                <input type="hidden" id="medicoId">
+                <label for="medicoNombre">Nombre:</label>
+                <input type="text" id="medicoNombre" required>
+                <label for="medicoApellido">Apellido:</label>
+                <input type="text" id="medicoApellido" required>
+                <label for="medicoEspecialidad">Especialidad:</label>
+                <select id="medicoEspecialidad" required></select>
+                <label for="medicoProvincia">Provincia:</label>
+                <select id="medicoProvincia" required></select>
+                <label for="medicoEmail">Email:</label>
+                <input type="email" id="medicoEmail" required>
+                <label for="medicoTelefono">Teléfono:</label>
+                <input type="text" id="medicoTelefono" required>
+                <label for="medicoDireccion">Dirección:</label>
+                <input type="text" id="medicoDireccion" required>
+                <label for="medicoCiudad">Ciudad:</label>
+                <input type="text" id="medicoCiudad" required>
+                <label for="medicoDni">DNI:</label>
+                <input type="text" id="medicoDni" required>
+                <label for="medicoFechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="medicoFechaNacimiento" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+
+        <div id="formularioPaciente" class="formulario">
+            <h2>Agregar/Editar Paciente</h2>
+            <form id="pacienteForm">
+                <input type="hidden" id="pacienteId">
+                <label for="pacienteNombre">Nombre:</label>
+                <input type="text" id="pacienteNombre" required>
+                <label for="pacienteApellido">Apellido:</label>
+                <input type="text" id="pacienteApellido" required>
+                <label for="pacienteProvincia">Provincia:</label>
+                <select id="pacienteProvincia" required></select>
+                <label for="pacienteEmail">Email:</label>
+                <input type="email" id="pacienteEmail" required>
+                <label for="pacienteTelefono">Teléfono:</label>
+                <input type="text" id="pacienteTelefono" required>
+                <label for="pacienteDireccion">Dirección:</label>
+                <input type="text" id="pacienteDireccion" required>
+                <label for="pacienteCiudad">Ciudad:</label>
+                <input type="text" id="pacienteCiudad" required>
+                <label for="pacienteDni">DNI:</label>
+                <input type="text" id="pacienteDni" required>
+                <label for="pacienteFechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="pacienteFechaNacimiento" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
